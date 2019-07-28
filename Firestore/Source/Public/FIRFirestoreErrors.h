@@ -22,24 +22,24 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT NSString *const FIRFirestoreErrorDomain NS_SWIFT_NAME(FirestoreErrorDomain);
 
 /** Error codes used by Cloud Firestore. */
-typedef NS_ENUM(NSInteger, FIRFirestoreErrorCode) {
+typedef NS_ENUM(NSInteger, FIRError) {
   /**
    * The operation completed successfully. NSError objects will never have a code with this value.
    */
-  FIRFirestoreErrorCodeOK = 0,
+  FIRErrorOK = 0,
 
   /** The operation was cancelled (typically by the caller). */
-  FIRFirestoreErrorCodeCancelled = 1,
+  FIRErrorCancelled = 1,
 
   /** Unknown error or an error from a different error domain. */
-  FIRFirestoreErrorCodeUnknown = 2,
+  FIRErrorUnknown = 2,
 
   /**
    * Client specified an invalid argument. Note that this differs from FailedPrecondition.
    * InvalidArgument indicates arguments that are problematic regardless of the state of the
    * system (e.g., an invalid field name).
    */
-  FIRFirestoreErrorCodeInvalidArgument = 3,
+  FIRErrorInvalidArgument = 3,
 
   /**
    * Deadline expired before operation could complete. For operations that change the state of the
@@ -47,57 +47,57 @@ typedef NS_ENUM(NSInteger, FIRFirestoreErrorCode) {
    * example, a successful response from a server could have been delayed long enough for the
    * deadline to expire.
    */
-  FIRFirestoreErrorCodeDeadlineExceeded = 4,
+  FIRErrorDeadlineExceeded = 4,
 
   /** Some requested document was not found. */
-  FIRFirestoreErrorCodeNotFound = 5,
+  FIRErrorNotFound = 5,
 
   /** Some document that we attempted to create already exists. */
-  FIRFirestoreErrorCodeAlreadyExists = 6,
+  FIRErrorAlreadyExists = 6,
 
   /** The caller does not have permission to execute the specified operation. */
-  FIRFirestoreErrorCodePermissionDenied = 7,
+  FIRErrorPermissionDenied = 7,
 
   /**
    * Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system
    * is out of space.
    */
-  FIRFirestoreErrorCodeResourceExhausted = 8,
+  FIRErrorResourceExhausted = 8,
 
   /**
    * Operation was rejected because the system is not in a state required for the operation's
    * execution.
    */
-  FIRFirestoreErrorCodeFailedPrecondition = 9,
+  FIRErrorFailedPrecondition = 9,
 
   /**
    * The operation was aborted, typically due to a concurrency issue like transaction aborts, etc.
    */
-  FIRFirestoreErrorCodeAborted = 10,
+  FIRErrorAborted = 10,
 
   /** Operation was attempted past the valid range. */
-  FIRFirestoreErrorCodeOutOfRange = 11,
+  FIRErrorOutOfRange = 11,
 
   /** Operation is not implemented or not supported/enabled. */
-  FIRFirestoreErrorCodeUnimplemented = 12,
+  FIRErrorUnimplemented = 12,
 
   /**
    * Internal errors. Means some invariants expected by underlying system has been broken. If you
    * see one of these errors, something is very broken.
    */
-  FIRFirestoreErrorCodeInternal = 13,
+  FIRErrorInternal = 13,
 
   /**
    * The service is currently unavailable. This is a most likely a transient condition and may be
    * corrected by retrying with a backoff.
    */
-  FIRFirestoreErrorCodeUnavailable = 14,
+  FIRErrorUnavailable = 14,
 
   /** Unrecoverable data loss or corruption. */
-  FIRFirestoreErrorCodeDataLoss = 15,
+  FIRErrorDataLoss = 15,
 
   /** The request does not have valid authentication credentials for the operation. */
-  FIRFirestoreErrorCodeUnauthenticated = 16
-} NS_SWIFT_NAME(FirestoreErrorCode);
+  FIRErrorUnauthenticated = 16
+} NS_SWIFT_NAME(Error);
 
 NS_ASSUME_NONNULL_END
